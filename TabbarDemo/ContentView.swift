@@ -7,15 +7,41 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+enum TabItem:String, CaseIterable, Identifiable{
+    case One
+    case Two
+    case Three
+    case Four
+    
+    var id:String{self.rawValue}
+    
+    @ViewBuilder
+    var view: some View{
+        switch self {
+        case .One:
+            Text("View \(id)")
+        case .Two:
+            Text("View \(id)")
+        case .Three:
+            Text("View \(id)")
+        case .Four:
+            Text("View \(id)")
         }
-        .padding()
+    }
+}
+
+struct ContentView: View {
+    @State private var selectedTag:TabItem = .One
+    var body: some View {
+        TabView(selection: $selectedTag) {
+            ForEach(TabItem.allCases) { value in
+                value.view
+                    .tag(value)
+            }
+        }
+        .overlay(alignment: .bottom) {
+            CustomTabView(selectedTab: $selectedTag)
+        }
     }
 }
 
