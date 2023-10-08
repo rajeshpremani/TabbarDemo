@@ -14,6 +14,7 @@
 		312A321A2AACBB5F004EA3B2 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A32192AACBB5F004EA3B2 /* CustomTabView.swift */; };
 		312A321C2AAE0778004EA3B2 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A321B2AAE0778004EA3B2 /* CircularProgress.swift */; };
 		312A321E2AAE0E3A004EA3B2 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A321D2AAE0E3A004EA3B2 /* RangeSlider.swift */; };
+		319047102AD19CC5006C10F2 /* PageViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190470F2AD19CC5006C10F2 /* PageViewScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		312A32192AACBB5F004EA3B2 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		312A321B2AAE0778004EA3B2 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		312A321D2AAE0E3A004EA3B2 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		3190470F2AD19CC5006C10F2 /* PageViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				312A32192AACBB5F004EA3B2 /* CustomTabView.swift */,
 				312A321B2AAE0778004EA3B2 /* CircularProgress.swift */,
 				312A321D2AAE0E3A004EA3B2 /* RangeSlider.swift */,
+				3190470F2AD19CC5006C10F2 /* PageViewScreen.swift */,
 			);
 			path = TabbarDemo;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				312A321A2AACBB5F004EA3B2 /* CustomTabView.swift in Sources */,
 				312A321E2AAE0E3A004EA3B2 /* RangeSlider.swift in Sources */,
 				312A320E2AACB7D9004EA3B2 /* ContentView.swift in Sources */,
+				319047102AD19CC5006C10F2 /* PageViewScreen.swift in Sources */,
 				312A320C2AACB7D9004EA3B2 /* TabbarDemoApp.swift in Sources */,
 				312A321C2AAE0778004EA3B2 /* CircularProgress.swift in Sources */,
 			);

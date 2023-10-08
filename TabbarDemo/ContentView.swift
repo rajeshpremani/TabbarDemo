@@ -19,13 +19,46 @@ enum TabItem:String, CaseIterable, Identifiable{
     var view: some View{
         switch self {
         case .One:
-            Text("View \(id)")
+            ZStack{
+                Image("bg")
+                    .resizable()
+                    .ignoresSafeArea()
+                VStack{
+                    Text("View \(id)")
+                    Spacer()
+                }.frame(maxWidth: .infinity)
+                
+            }
+            .ignoresSafeArea()
+//            .background(
+//                Image("bg")
+//                    .resizable()
+//                    .ignoresSafeArea()
+//
+//            )
+            .navigationTitle("One")
+            
         case .Two:
-            Text("View \(id)")
+            ZStack{
+                Color.blue
+                Text("View \(id)")
+            }
+            .ignoresSafeArea()
+            .navigationTitle("Two")
         case .Three:
-            Text("View \(id)")
+            ZStack{
+                Color.green
+                Text("View \(id)")
+            }
+            .ignoresSafeArea()
+            .navigationTitle("Three")
         case .Four:
-            Text("View \(id)")
+            ZStack{
+                Color.cyan
+                Text("View \(id)")
+            }
+            .ignoresSafeArea()
+            .navigationTitle("Four")
         }
     }
 }
@@ -33,14 +66,18 @@ enum TabItem:String, CaseIterable, Identifiable{
 struct ContentView: View {
     @State private var selectedTag:TabItem = .One
     var body: some View {
-        TabView(selection: $selectedTag) {
-            ForEach(TabItem.allCases) { value in
-                value.view
-                    .tag(value)
+        NavigationStack {
+            TabView(selection: $selectedTag) {
+                ForEach(TabItem.allCases) { value in
+                    value.view
+                        .tag(value)
+                }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(selectedTag.id)
+            .overlay(alignment: .bottom) {
+                CustomTabView(selectedTab: $selectedTag)
         }
-        .overlay(alignment: .bottom) {
-            CustomTabView(selectedTab: $selectedTag)
         }
     }
 }
