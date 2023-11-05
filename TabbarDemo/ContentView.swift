@@ -74,7 +74,7 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(selectedTag.id)
+//            .navigationTitle(selectedTag.id)
             .overlay(alignment: .bottom) {
                 CustomTabView(selectedTab: $selectedTag)
         }
